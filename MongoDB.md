@@ -56,11 +56,11 @@ db.products.deleteMany({active: false})
 
 - Clear the shell
   ```js
-  cls
+  cls;
   ```
 - Show current database
   ```js
-  db
+  db;
   ```
 - Show databases
   ```js
