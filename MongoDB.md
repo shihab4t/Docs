@@ -36,40 +36,66 @@ db.products.deleteMany({active: false})
 ## Import / Export in Mongodb
 
 - Export as bson
-  - `mongodump --uri "mongodb+srv://sandbox.<altes url>.mongodb.net/sample_supplies" --username shihab4t`
+  ```
+  mongodump --uri "mongodb+srv://sandbox.<altes url>.mongodb.net/sample_supplies" --username shihab4t
+  ```
 - Export as json
-  - `mongoexport --uri "mongodb+srv://sandbox.<altes url>.mongodb.net/sample_supplies" --username shihab4t --collection=sales --out=sales.json`
+  ```
+  mongoexport --uri "mongodb+srv://sandbox.<altes url>.mongodb.net/sample_supplies" --username shihab4t --collection=sales --out=sales.json
+  ```
 - Import bson
-  - `mongorestore --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies" --drop dump`
+  ```
+  mongorestore --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies" --drop dump
+  ```
 - import json/csv
-  - `mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies" --drop sales.json`
+  ```
+  mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies" --drop sales.json
+  ```
 
 ## Utilities Commands
 
 - Clear the shell
-  - `cls`
+  ```js
+  cls
+  ```
 - Show current database
-  - `db`
+  ```js
+  db
+  ```
 - Show databases
-  - `show dbs`
+  ```js
+  show dbs
+  ```
 - Use a database
-  - `use <db name>`
-  - `use sample_training`
+  ```js
+  use <db name>
+  use sample_training
+  ```
 - Show all collection on current database
-  - `show collections`
+  ```js
+  show collections
+  ```
 
 ## Read Operations
 
 - Getting All documents
-  - `db.<collection name>.find()`
-  - `db.zips.find()`
+  ```js
+  db.<collection name>.find()
+  db.zips.find()
+  ```
 - Finding documents
-  - `db.<collection name>.find( {"field": "value"} )`
-  - `db.zips.find( {"state": "NY"} )`
+  ```js
+  db.<collection name>.find( {"field": "value"} )
+  db.zips.find( {"state": "NY"} )
+  ```
 - Count documents
-  - `db.<collection name>.find( {"field": "value"} ).count()`
-  - `db.zips.find( {"state": "NY"} ).count()`
-  - `db.zips.find( {"state": "NY", "city": "ALBANY"} ).count()`
+  ```js
+  db.<collection name>.find( {"field": "value"} ).count()
+  db.zips.find( {"state": "NY"} ).count()
+  db.zips.find( {"state": "NY", "city": "ALBANY"} ).count()
+  ```
 - Show documents data good format
-  - `db.<collection name>.find( {"field": "value"} ).pretty()`
-  - `db.zips.find( {"state": "NY", "city": "ALBANY"} ).pretty()`
+  ```js
+  db.<collection name>.find( {"field": "value"} ).pretty()
+  db.zips.find( {"state": "NY", "city": "ALBANY"} ).pretty()
+  ```
